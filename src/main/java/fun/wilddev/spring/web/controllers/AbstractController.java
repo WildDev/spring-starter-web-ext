@@ -17,6 +17,13 @@ import org.springframework.validation.*;
 public abstract class AbstractController {
 
     /**
+     * Default constructor
+     */
+    protected AbstractController() {
+
+    }
+
+    /**
      * Checks for global error presence by its code
      *
      * @param errors - {@link Errors} object
@@ -128,7 +135,7 @@ public abstract class AbstractController {
      *
      * @return server response with the only http status set
      */
-    public <T> ResponseEntity<?> noContent() {
+    public ResponseEntity<?> noContent() {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
@@ -136,6 +143,7 @@ public abstract class AbstractController {
      * Assembles http 400 BAD_REQUEST with error fields
      * set based on the supplied {@link Errors} object
      *
+     * @param errors - {@link Errors} object
      * @return fully assembled server response
      */
     public ResponseEntity<?> badRequest(Errors errors) {
@@ -164,6 +172,7 @@ public abstract class AbstractController {
      * Assembles http 412 PRECONDITION_FAILED with error fields
      * set based on the supplied {@link Errors} object
      *
+     * @param errors - {@link Errors} object
      * @return fully assembled server response
      */
     public ResponseEntity<?> preconditionFailed(Errors errors) {
