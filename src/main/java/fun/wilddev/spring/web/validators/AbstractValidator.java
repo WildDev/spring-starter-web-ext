@@ -1,13 +1,26 @@
 package fun.wilddev.spring.web.validators;
 
-import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 
 import org.springframework.validation.*;
 
-@AllArgsConstructor
+/**
+ * An abstraction for validator implementations
+ */
 public abstract class AbstractValidator implements Validator {
 
+    /**
+     * Instantiates an implementation class by {@link Logger}
+     *
+     * @param log - logger reference
+     */
+    protected AbstractValidator(Logger log) {
+        this.log = log;
+    }
+
+    /**
+     * Logger reference
+     */
     protected final Logger log;
 
     /**

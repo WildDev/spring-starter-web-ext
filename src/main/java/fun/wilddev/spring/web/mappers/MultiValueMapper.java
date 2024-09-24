@@ -16,6 +16,13 @@ import org.springframework.util.*;
 public class MultiValueMapper {
 
     /**
+     * Default constructor
+     */
+    public MultiValueMapper() {
+
+    }
+
+    /**
      * Maps {@link java.util.Map} to a single level {@link org.springframework.util.MultiValueMap}
      *
      * @param map - source map

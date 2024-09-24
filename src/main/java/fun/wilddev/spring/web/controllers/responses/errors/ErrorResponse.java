@@ -11,12 +11,29 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
-@AllArgsConstructor
 public class ErrorResponse {
 
+    /**
+     * Instantiates the class by {@code globalError} and {@code fieldErrors}
+     *
+     * @param globalError - global error text
+     * @param fieldErrors - field errors schema array
+     */
+    public ErrorResponse(String globalError, List<FieldErrorResponse> fieldErrors) {
+
+        this.globalError = globalError;
+        this.fieldErrors = fieldErrors;
+    }
+
+    /**
+     * Global error text
+     */
     @JsonProperty
     private String globalError;
 
+    /**
+     * Field errors schema array
+     */
     @JsonProperty
     private List<FieldErrorResponse> fieldErrors;
 }
