@@ -21,6 +21,6 @@ Also available in Maven central:
 <dependency>
     <groupId>fun.wilddev.lib</groupId>
     <artifactId>spring-starter-web-ext</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE</version>
 </dependency>
 ```
