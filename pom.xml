@@ -13,7 +13,7 @@
 
 	<groupId>fun.wilddev.lib</groupId>
 	<artifactId>spring-starter-web-ext</artifactId>
-	<version>1.0.0.RELEASE</version>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<name>spring-starter-web-ext</name>
 	<description>Web extension starter for Spring apps</description>
@@ -98,13 +98,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Dev -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
