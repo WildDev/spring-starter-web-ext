@@ -24,3 +24,14 @@ Also available in Maven central:
     <version>1.0.1.RELEASE</version>
 </dependency>
 ```
+
+### License
+
+*This project is licensed under the Apache License 2.0.*
+
+Dependencies:
+
+- Spring Boot (Apache 2.0)
+- Lombok (MIT)
+
+See [LICENSE](LICENSE) and [NOTICE](NOTICE) files for details.
